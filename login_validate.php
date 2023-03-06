@@ -22,7 +22,7 @@ include("connectdb.php");
         $sql="select * from users where user_email='$email' && user_password='$password'";
         $result=mysqli_query($conn,$sql);
         if(mysqli_num_rows($result)>0){
-            header("Location:index.php");
+             header("Location:index.php");
         }
         else{
             header("location:login.php");
