@@ -68,7 +68,7 @@ include("carosal.php");
             </div>
           </div>
           <div class="addtocart d-flex justify-content-center pb-3 ms-2 me-2 mt-2">
-            <input type="visible" name="product_id" value="<?php echo $row['product_id'];?>">
+            <input type="hidden" name="product_id" value="<?php echo $row['product_id'];?>">
             <button class="btn btn-success " name="submit" value="submit" ><a href="cart_validate.php" class="text text-decoration-none text-white" value="submit" name="submit" >Add <?php echo $row['product_name']; ?> to cart</a></button>
             <input type="number" id="quantity" name="quantity" min="1" max="5" value="1" class="border-0 bg-secondary ms-2 rounded">
             
