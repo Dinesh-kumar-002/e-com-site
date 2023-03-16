@@ -20,6 +20,22 @@
         .card{
             background-color: rgb(199, 199, 222);
         }
+        #loading-animation {
+  display: none;
+  /* Add any other styles you like */
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
         </style>
 </head>
 <body>
@@ -37,14 +53,19 @@
                    <div class="form-group required">  
               <label for="user_name">Email </label>  
              <input type="text" class="form-control text-lowercase" id="username" required="" name="user_name" autocomplete=off>  
-               </div>                      
+               </div> 
+               
+               <div id="loading-animation">
+                  <div class="spinner"></div>
+              </div>
+                    
        <div class="form-group required">  
     <label class="d-flex flex-row align-items-center" for="password">Password   
     </label>  
 <input type="password" class="form-control" required="" id="password" name="password" autpcomplete=off>  
        </div>  
        <div class="form-group pt-3 d-flex justify-content-center">  
-      <input type="submit" name="submit" class="bg-success text-white px-3" value="login">  
+      <input type="submit" name="submit" class="bg-success text-white px-3" value="login" >  
          
                   </div> 
                   <p class="px-3 text-center pt-3">  
@@ -60,6 +81,7 @@
                 </div>  
             </div>  
 </div>  
+
 <?php
 include("footer.php");
 ?>

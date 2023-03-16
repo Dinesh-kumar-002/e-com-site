@@ -9,6 +9,7 @@
     $sql="insert into users(user_name,user_email,user_password,user_phone_number,user_address) values('$username','$useremail','$userpassword','$userphonenumber','$useraddress')";
     $result=mysqli_query($conn,$sql);
     if($result){
+        sleep(3.5);
         header("Location:login.php");
     }
     die(error_reporting(1));

@@ -58,7 +58,7 @@ body{
                             <input type="text" class="form-control" id="form-control-name" placeholder="p_name" name="p_name" required>   
                         </div>
                         <div class="input-group form-group">
-                            <input type="text" class="form-control" id="form-control-email" placeholder="product image path" name="p_image" required>
+                            <input type="file" class="form-control" id="form-control-email" placeholder="product image path" name="p_image" required>
                         </div>
                         <div class="input-group form-group">
                             <input type="text" class="form-control" id="form-control-password" placeholder="product price" name="p_price" required>

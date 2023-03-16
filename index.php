@@ -29,6 +29,9 @@ body{
     background-repeat: no-repeat;
 }
 
+.logo{
+    border-radius: 50%;
+}
     </style>
 </head>
 <body>
@@ -42,6 +45,12 @@ body{
 include("carosal.php");
 ?>
 <div class="scrolltext"><marquee class="text-white" scrollamount=10 ><h3>OFFER OFFER OFFER !!! FISRT 100 CUSTOMERS WILL GET 50% OFF!!!</h3></marquee></div>
+<?php if($_SESSION['username']=""){
+  echo '';
+} 
+else{
+  $user_name= $_SESSION['username']; 
+} ?>
 <div class="container product-container">
   <div class="row py-5">
 <?php
@@ -49,10 +58,10 @@ include("carosal.php");
       ?>
 
 
-    <div class="col-6 col-md-3 my-3 my-md-0">
+    <div class="col-6 col-md-3 my-3 my-md-0 " id="product_link">
       <form action="cart_validate.php" method="post">
         <div class="card rounded mt-5">
-          <img class="card-img-top products mt-5" src="<?php echo $row['product_image']; ?>" alt="Card image cap" height="200px">
+          <img class="card-img-top products mt-5" src="images/<?php echo $row['product_image']; ?>" alt="Card image cap" height="200px">
           <h4 class="title ps-3" name="product_name"><?php echo $row['product_name']; ?></h4>
           <div class="stars ps-3" >
             <i class="fa-sharp fa-solid fa-star"></i>
@@ -69,7 +78,7 @@ include("carosal.php");
           </div>
           <div class="addtocart d-flex justify-content-center pb-3 ms-2 me-2 mt-2">
             <input type="hidden" name="product_id" value="<?php echo $row['product_id'];?>">
-            <button class="btn btn-success " name="submit" value="submit" ><a href="cart_validate.php" class="text text-decoration-none text-white" value="submit" name="submit" >Add <?php echo $row['product_name']; ?> to cart</a></button>
+            <button class="btn btn-success " name="submit" value="submit" >add to cart</button>
             <input type="number" id="quantity" name="quantity" min="1" max="5" value="1" class="border-0 bg-secondary ms-2 rounded">
             
           </div>
@@ -83,6 +92,10 @@ include("carosal.php");
 
 </div>
 </div>
+
+
+
+
 
 <!-- footer part -->
 <?php

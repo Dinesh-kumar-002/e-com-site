@@ -31,31 +31,35 @@ include("header2.php");
                 <div class="row">  
                     <div class="col-md-5 mx-auto">  
                         <div class="card card-body">  
-                      <form id="submitForm" action="signup_validate.php" method="post" data-parsley-validate="" data-parsley-errors-messages-disabled="true" novalidate="" _lpchecked="1">  
+                      <form id="submitForm" name="signup" action="signup_validate.php" method="post" onsubmit="return validatePassword()">  
                       <h1 class="text-center">Signup</h1>  
                    <div class="form-group required">  
               <label for="user_name"> Enter your Name </label>  
-             <input type="text" class="form-control text-lowercase" id="username" required name="user_name" autocomplete=off>  
+             <input type="text" class="form-control text-lowercase" id="username" required name="user_name" autocomplete=on>  
                </div>
                <div class="form-group required">  
               <label for="user_email"> Enter your Email </label>  
-             <input type="email" class="form-control text-lowercase" id="useremail" required name="user_email" autocomplete=off>  
+             <input type="email" class="form-control text-lowercase" id="useremail" required name="user_email" autocomplete=on>  
                </div>
                <div class="form-group required">  
               <label for="user_password"> create password</label>  
              <input type="password" class="form-control text-lowercase" id="userpassword" required name="user_password" autocomplete=off>  
                </div> 
                <div class="form-group required">  
+              <label for="user_password"> confirm password</label>  
+             <input type="password" class="form-control text-lowercase" id="userpassword2" required name="user_password2" autocomplete=off>  
+               </div>
+               <div class="form-group required">  
               <label for="user_phone_number"> Enter phone number</label>  
-             <input type="text" class="form-control text-lowercase" id="userphonenumber" required name="user_phone_number" autocomplete=off>  
+             <input type="number" class="form-control text-lowercase" id="userphonenumber" required name="user_phone_number" autocomplete=off maxlength="10">  
                </div>
                <div class="form-group required">  
               <label for="user_address">Enter address</label>  
-             <textarea class="form-control text-lowercase" id="useraddress" required name="user_address" autocomplete=off></textarea>  
+             <textarea class="form-control text-lowercase" id="useraddress" required name="user_address" autocomplete=on></textarea>  
                </div>                     
          
        <div class="form-group pt-3 d-flex justify-content-center">  
-        <input type="submit" name="submit" class="bg-success text-white">
+        <input type="submit" name="submit" class="bg-success text-white" >
               </div>  
           
                </form>  
@@ -71,5 +75,22 @@ include("header2.php");
 <?php
 include("footer.php");
 ?>
+<script type="text/javascript">
+function validatePassword(){
+  var phone_validate= document.forms["signup"]["user_phone_number"].value.length;
+  var pass1=document.forms["signup"]["user_password"].value;
+  var pass2=document.forms["signup"]["user_password2"].value;
+  if(phone_validate>10 && phone_validate<10){
+    window.alert("Enter valid phonenumber");
+    return false;
+  }
+  if(pass1!=pass2){
+      window.alert("password mismatch");
+      return false;
+    }
+  
+  }
+       
+</script>
 </body>
 </html>
