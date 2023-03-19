@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>carosal</title>
     <style>
-        @media only screen and(max-width:320px) {
+        @media only screen and(max-width:520px) {
             .banner{
-            height:200px;
+            height:20px !important;
             width:100%;
                 }
             
@@ -25,16 +25,16 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active banner1">
-        <img src="images/banner4_edited.jpg" class="banner w-100" alt="banner">
+        <img src="images/banner4_edited.jpg" class="banner" alt="banner">
       </div>
       <div class="carousel-item">
-        <img src="images/banner4_edited.jpg" class="banner w-100" alt="banner">
+        <img src="images/banner4_edited.jpg" class="banner" alt="banner">
       </div>
       <div class="carousel-item">
-        <img src="images/banner4_edited.jpg" class="banner w-100" alt="banner">
+        <img src="images/banner4_edited.jpg" class="banner" alt="banner">
       </div>
       <div class="carousel-item">
-        <img src="images/banner4_edited.jpg" class="banner w-100" alt="banner">
+        <img src="images/banner4_edited.jpg" class="banner" alt="banner">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

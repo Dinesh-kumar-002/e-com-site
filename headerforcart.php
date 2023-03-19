@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +6,11 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
         body{
           overflow-x:hidden;
         }
@@ -43,8 +41,7 @@ session_start();
 <!-- <a class="navbar-brand " href="#"><img class="logo rounded-circle" src="images/favicon.ico" alt="" width="40" height="40"></a> -->
 
 <a class="navbar-brand text-decoration-none text-white" href="#">e-com site</a>
-<a class="navbar-brand" href="cart.php"><img class="logo ms-2 p-1 bg-dark pe-2" src="images\icons8-shopping-cart-50.png" alt="cart_image" width="40" height="40"></a>
-<div class="login_check d-flex">
+
 <?php 
     if(!isset($_SESSION['username'])){
      echo '<a class="user_logo ms-2 px-3 py-1 bg-success rounded text-decoration-none text-white d-flex justify-content-center" href="login.php">'. "login".'</a>';
@@ -57,20 +54,17 @@ session_start();
       }
         
         ?>
-</div>
   <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse " id="collapsibleNavbar">
     <ul class="navbar-nav list-unstyled d-flex px-3">
-      <li class="text"><a href="#product_link" class="link text-white text-decoration-none w-100 d-flex justify-content-center ">shop</a></li>
+     
       <li class="text px-3"><a href="aboutus2.php" class="link text-white text-decoration-none w-100 d-flex justify-content-center ">Aboutus</a></li>    
     </ul>
   </div>  
 </nav>
-</body>
-
-  <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
   <script>
     function user_info(){
       window.alert("<?php echo 'logged in as  '. $_SESSION["username"]; ?>");
@@ -78,4 +72,8 @@ session_start();
     }
 
   </script>
+</body>
+
+  
+ 
 </html>

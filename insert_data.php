@@ -35,11 +35,11 @@ body{
 .card{
     width:35%;
 }
-@media only screen and (max-width: 520px){
-    .card{
-        width: 90%;
+    @media only screen and (max-width: 520px){
+        .card{
+            width: 90%;
 
-    }
+        }
 }
     </style>
 </head>

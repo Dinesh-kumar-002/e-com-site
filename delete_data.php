@@ -32,7 +32,7 @@ body{
 .main{
     height:70vh;
 }
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 512px){
     .card{
         width: 90%;
 

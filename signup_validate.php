@@ -1,5 +1,5 @@
 <?php
-    require_once("connectdb.php");
+    include("connectdb.php");
     $username = $_POST['user_name'];
     $userpassword = $_POST['user_password'];
     $useremail = $_POST['user_email'];
@@ -12,13 +12,10 @@
         sleep(3.5);
         header("Location:login.php");
     }
-    die(error_reporting(1));
-   
-
+    else{
+        header("Location:signup.php");
+    }
     
-
-   
-
 
 ?>
 
